@@ -72,6 +72,12 @@ border-color: rgba(155, 153, 153, 0.23);
 
 }
 
+.heading{
+ position:absolute;
+ top:5px;
+ left:320px;
+}
+
 .navbar {
     min-height: 90px;
     margin-bottom: 0px;
@@ -80,6 +86,12 @@ border-color: rgba(155, 153, 153, 0.23);
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
     border-color:transparent;
 }
+
+.navbar-logo{
+    width: 7rem;
+}
+
+
 .navbar-toggle {
 background-color: black;
 border: 1px solid black;

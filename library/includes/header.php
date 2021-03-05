@@ -1,15 +1,20 @@
 <div class="navbar navbar-inverse set-radius-zero" >
+
         <div class="container">
+        
             <div class="navbar-header">
+            
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                
                 <a class="navbar-brand" >
-
-                    <img src="assets/img/logo.png" />
+                    <img class="navbar-logo" src="assets/img/IIIT-BH_Official_Logo.png" />
+                    
                 </a>
+                <h1 class="heading">IIIT Bhubaneswar Library Information System</h1>
 
             </div>
 <?php if($_SESSION['login'])

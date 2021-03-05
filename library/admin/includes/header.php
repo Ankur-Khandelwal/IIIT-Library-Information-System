@@ -8,8 +8,9 @@
                 </button>
                 <a class="navbar-brand">
 
-                    <img src="assets/img/logo.png" />
+                    <img class="navbar-logo" src="assets/img/IIIT-BH_Official_Logo.png" />
                 </a>
+                <h1 class="heading">IIIT Bhubaneswar Library Information System</h1>
 
             </div>
 

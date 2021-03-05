@@ -66,6 +66,12 @@ body {
 .menu-top-active {
     background-color:#eeeeee;
 }
+
+.heading{
+ position:absolute;
+ top:5px;
+ left:400px;
+}
 .navbar-inverse {
 background-color: #FFF;
 border-color: rgba(155, 153, 153, 0.23);
@@ -76,6 +82,10 @@ border-color: rgba(155, 153, 153, 0.23);
     min-height: 90px;
     margin-bottom: 0px;
    
+}
+
+.navbar-logo{
+    width: 7rem;
 }
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
     border-color:transparent;
