@@ -110,38 +110,38 @@ error:function (){}
 <div class="col-md-9 col-md-offset-1">
                <div class="panel panel-danger">
                         <div class="panel-heading">
-                           SINGUP FORM
+                           SIGN UP FORM
                         </div>
                         <div class="panel-body">
                             <form name="signup" method="post" onSubmit="return valid();">
 <div class="form-group">
-<label>Enter Full Name</label>
-<input class="form-control" type="text" name="fullanme" autocomplete="off" required />
+<label>Full Name</label>
+<input class="form-control" type="text" name="fullanme" autocomplete="off" placeholder="Enter your Full Name" required />
 </div>
 
 
 <div class="form-group">
-<label>Mobile Number :</label>
-<input class="form-control" type="text" name="mobileno" maxlength="10" autocomplete="off" required />
+<label>Mobile Number</label>
+<input class="form-control" type="text" name="mobileno" maxlength="10" autocomplete="off" placeholder="Enter your Mobile Number" required />
 </div>
                                         
 <div class="form-group">
-<label>Enter Email</label>
-<input class="form-control" type="email" name="email" id="emailid" onBlur="checkAvailability()"  autocomplete="off" required  />
+<label>Email Address</label>
+<input class="form-control" type="email" name="email" id="emailid" onBlur="checkAvailability()"  autocomplete="off" placeholder="Enter your Email address" required  />
    <span id="user-availability-status" style="font-size:12px;"></span> 
 </div>
 
 <div class="form-group">
-<label>Enter Password</label>
-<input class="form-control" type="password" name="password" autocomplete="off" required  />
+<label>Password</label>
+<input class="form-control" type="password" name="password" autocomplete="off" placeholder="Enter your Password" required  />
 </div>
 
 <div class="form-group">
 <label>Confirm Password </label>
-<input class="form-control"  type="password" name="confirmpassword" autocomplete="off" required  />
+<input class="form-control"  type="password" name="confirmpassword" autocomplete="off" placeholder="Enter your Password Again" required  />
 </div>
  <div class="form-group">
-<label>Verification code : </label>
+<label>CAPTCHA</label>
 <input type="text"  name="vercode" maxlength="5" autocomplete="off" required style="width: 150px; height: 25px;" />&nbsp;<img src="captcha.php">
 </div>                                
 <button type="submit" name="signup" class="btn btn-danger" id="submit">Register Now </button>

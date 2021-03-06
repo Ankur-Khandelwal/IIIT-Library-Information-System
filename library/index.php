@@ -84,17 +84,17 @@ echo "<script>alert('Invalid Details');</script>";
 <form role="form" method="post">
 
 <div class="form-group">
-<label>Enter Email id</label>
-<input class="form-control" type="text" name="emailid" required autocomplete="off" />
+<label>Email Address</label>
+<input class="form-control" type="text" name="emailid" placeholder="Enter your Email Address" required autocomplete="off" />
 </div>
 <div class="form-group">
 <label>Password</label>
-<input class="form-control" type="password" name="password" required autocomplete="off"  />
+<input class="form-control" type="password" name="password" placeholder="Enter your Password" required autocomplete="off"  />
 <p class="help-block"><a href="user-forgot-password.php">Forgot Password</a></p>
 </div>
 
  <div class="form-group">
-<label>Verification code : </label>
+<label>CAPTCHA </label>
 <input type="text" class="form-control1"  name="vercode" maxlength="5" autocomplete="off" required  style="height:25px;" />&nbsp;<img src="captcha.php">
 </div> 
 
