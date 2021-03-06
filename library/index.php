@@ -12,11 +12,12 @@ if ($_POST["vercode"] != $_SESSION["vercode"] OR $_SESSION["vercode"]=='')  {
         echo "<script>alert('Incorrect verification code');</script>" ;
     } 
         else {
-$email=$_POST['emailid'];
+$studentID = $_POST['studentID'];
 $password=md5($_POST['password']);
-$sql ="SELECT EmailId,Password,StudentId,Status FROM tblstudents WHERE EmailId=:email and Password=:password";
+
+$sql ="SELECT EmailId,Password,StudentId,Status FROM tblstudents WHERE StudentId=:studentID and Password=:password";
 $query= $dbh -> prepare($sql);
-$query-> bindParam(':email', $email, PDO::PARAM_STR);
+$query-> bindParam(':studentID', $studentID, PDO::PARAM_STR);
 $query-> bindParam(':password', $password, PDO::PARAM_STR);
 $query-> execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
@@ -27,7 +28,7 @@ if($query->rowCount() > 0)
  $_SESSION['stdid']=$result->StudentId;
 if($result->Status==1)
 {
-$_SESSION['login']=$_POST['emailid'];
+$_SESSION['login']=$_POST['studentID'];
 echo "<script type='text/javascript'> document.location ='dashboard.php'; </script>";
 } else {
 echo "<script>alert('Your Account Has been blocked .Please contact admin');</script>";
@@ -69,7 +70,7 @@ echo "<script>alert('Invalid Details');</script>";
 <div class="container">
 <div class="row pad-botm">
 <div class="col-md-12">
-<h4 class="header-line">USER LOGIN FORM</h4>
+<h4 class="header-line">STUDENT LOGIN FORM</h4>
 </div>
 </div>
              
@@ -84,9 +85,10 @@ echo "<script>alert('Invalid Details');</script>";
 <form role="form" method="post">
 
 <div class="form-group">
-<label>Email Address</label>
-<input class="form-control" type="text" name="emailid" placeholder="Enter your Email Address" required autocomplete="off" />
+<label>Student Id</label>
+<input class="form-control" type="text" name="studentID" placeholder="Enter your Student Id" required autocomplete="off" />
 </div>
+
 <div class="form-group">
 <label>Password</label>
 <input class="form-control" type="password" name="password" placeholder="Enter your Password" required autocomplete="off"  />
@@ -98,7 +100,7 @@ echo "<script>alert('Invalid Details');</script>";
 <input type="text" class="form-control1"  name="vercode" maxlength="5" autocomplete="off" required  style="height:25px;" />&nbsp;<img src="captcha.php">
 </div> 
 
- <button type="submit" name="login" class="btn btn-info">LOGIN </button> | <a href="signup.php">Not Register Yet</a>
+ <button type="submit" name="login" class="btn btn-info">LOGIN </button> | <a href="signup.php">Not Registered Yet?</a>
 </form>
  </div>
 </div>
