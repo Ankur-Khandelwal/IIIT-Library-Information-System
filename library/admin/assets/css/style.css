@@ -75,7 +75,7 @@ border-color: rgba(155, 153, 153, 0.23);
 .heading{
  position:absolute;
  top:5px;
- left:320px;
+ left:500px;
 }
 
 .navbar {
@@ -88,7 +88,7 @@ border-color: rgba(155, 153, 153, 0.23);
 }
 
 .navbar-logo{
-    width: 7rem;
+    width: 9rem;
 }
 
 

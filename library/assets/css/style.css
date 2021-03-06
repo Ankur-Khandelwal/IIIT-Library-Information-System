@@ -70,7 +70,7 @@ body {
 .heading{
  position:absolute;
  top:5px;
- left:400px;
+ left:550px;
 }
 .navbar-inverse {
 background-color: #FFF;
@@ -85,7 +85,7 @@ border-color: rgba(155, 153, 153, 0.23);
 }
 
 .navbar-logo{
-    width: 7rem;
+    width: 9rem;
 }
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
     border-color:transparent;

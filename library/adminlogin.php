@@ -38,7 +38,7 @@ echo "<script>alert('Invalid Details');</script>";
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Online Library Management System</title>
+    <title>IIIT-Bhubaneswar Library</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -72,12 +72,12 @@ echo "<script>alert('Invalid Details');</script>";
 <form role="form" method="post">
 
 <div class="form-group">
-<label>Enter Username</label>
-<input class="form-control" type="text" name="username" autocomplete="off" required />
+<label>Username</label>
+<input class="form-control" type="text" name="username" autocomplete="off" placeholder="Username" required />
 </div>
 <div class="form-group">
 <label>Password</label>
-<input class="form-control" type="password" name="password" autocomplete="off" required />
+<input class="form-control" type="password" name="password" autocomplete="off" placeholder="Password" required />
 </div>
  <div class="form-group">
 <label>Verification code : </label>
