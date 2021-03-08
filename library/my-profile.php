@@ -82,8 +82,18 @@ foreach($results as $result)
 {               ?>  
 
 <div class="form-group">
+<label>Name : </label>
+<?php echo htmlentities($result->FullName);?>
+</div>
+
+<div class="form-group">
 <label>Student ID : </label>
 <?php echo htmlentities($result->StudentId);?>
+</div>
+
+<div class="form-group">
+<label>Email Address: </label>
+<?php echo htmlentities($result->EmailId);?>
 </div>
 
 <div class="form-group">
@@ -98,6 +108,7 @@ foreach($results as $result)
 <?php } ?>
 
 
+
 <div class="form-group">
 <label>Profile Status : </label>
 <?php if($result->Status==1){?>
@@ -107,25 +118,13 @@ foreach($results as $result)
 <?php }?>
 </div>
 
-
 <div class="form-group">
-<label>Enter Full Name</label>
-<input class="form-control" type="text" name="fullanme" value="<?php echo htmlentities($result->FullName);?>" autocomplete="off" required />
+<label>Mobile Number: </label>
+<?php echo htmlentities($result->MobileNumber);?>
 </div>
+                                 
 
-
-<div class="form-group">
-<label>Mobile Number :</label>
-<input class="form-control" type="text" name="mobileno" maxlength="10" value="<?php echo htmlentities($result->MobileNumber);?>" autocomplete="off" required />
-</div>
-                                        
-<div class="form-group">
-<label>Enter Email</label>
-<input class="form-control" type="email" name="email" id="emailid" value="<?php echo htmlentities($result->EmailId);?>"  autocomplete="off" required readonly />
-</div>
 <?php }} ?>
-                              
-<button type="submit" name="update" class="btn btn-primary" id="submit">Update Now </button>
 
                                     </form>
                             </div>
