@@ -33,7 +33,8 @@ else{?>
          <div class="container">
         <div class="row pad-botm">
             <div class="col-md-12">
-                <h4 class="header-line">ADMIN DASHBOARD</h4>
+                <h4 class="header-line">STUDENT DASHBOARD</h4>
+                <?php echo htmlentities($result->StudentId);?>
                 
                             </div>
 
@@ -46,7 +47,7 @@ else{?>
             
                  <div class="col-md-3 col-sm-3 col-xs-6">
                       <div class="alert alert-info back-widget-set text-center">
-                            <i class="fa fa-bars fa-5x"></i>
+                            <i class="fa fa-book fa-5x"></i>
 <?php 
 $sid=$_SESSION['stdid'];
 $sql1 ="SELECT id from tblissuedbookdetails where StudentID=:sid";
@@ -64,7 +65,7 @@ $issuedbooks=$query1->rowCount();
              
                <div class="col-md-3 col-sm-3 col-xs-6">
                       <div class="alert alert-warning back-widget-set text-center">
-                            <i class="fa fa-recycle fa-5x"></i>
+                            <i class="fa fa-retweet fa-5x"></i>
 <?php 
 $rsts=0;
 $sql2 ="SELECT id from tblissuedbookdetails where StudentID=:sid and RetrunStatus=:rsts";
@@ -80,6 +81,32 @@ $returnedbooks=$query2->rowCount();
                           Books Not Returned Yet
                         </div>
                     </div>
+
+
+<?php 
+$rsts=0;
+$sql3 ="SELECT Status from tblstudents where StudentID=:sid";
+$query3 = $dbh -> prepare($sql3);
+$query3->bindParam(':sid',$sid,PDO::PARAM_STR);
+$query3->execute();
+$results3=$query3->fetchAll(PDO::FETCH_OBJ);
+$profileStatus=$results3[0]->Status;
+?>
+
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                      
+                      <?php if($profileStatus==1){?>
+                        <div class="alert alert-success back-widget-set text-center">
+<?php } else { ?>
+  <div class="alert alert-danger back-widget-set text-center">
+<?php }?>
+                            <i class="fa fa-user fa-5x"></i>
+
+                            <h3><?php if(htmlentities($profileStatus)==0){echo "Blocked";} else echo "Active"?></h3>
+                          Profile Status
+                        </div>
+                    </div>
+
         </div>
 
 
