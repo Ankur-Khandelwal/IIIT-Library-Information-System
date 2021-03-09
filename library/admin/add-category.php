@@ -20,7 +20,7 @@ $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
 {
-$_SESSION['msg']="Brand Listed successfully";
+$_SESSION['msg']="Category Added successfully";
 header('location:manage-categories.php');
 }
 else 
