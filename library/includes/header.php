@@ -47,6 +47,7 @@
                                 </ul>
                             </li>
                             <li><a href="issued-books.php">Issued Books</a></li>
+                            <li><a href="see-books.php">Books Available</a></li>
                           
 
                         </ul>
@@ -66,7 +67,7 @@
                           
                             <li><a href="adminlogin.php">Admin Login</a></li>
                             <li><a href="index.php">Student Login</a></li>
-                            <li><a href="signup.php">User Signup</a></li>
+                            <!-- <li><a href="signup.php">User Signup</a></li> -->
                           
 
                         </ul>
