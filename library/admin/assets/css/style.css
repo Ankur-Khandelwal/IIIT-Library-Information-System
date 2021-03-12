@@ -101,6 +101,13 @@ border: 1px solid black;
    DASHBOARD STYLES
  ============================================================ */
 
+ .alert {
+    padding: 30px;
+    margin-bottom: 20px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
 .img-comments {
    border: 3px double #e1e1e1;
 height: 60px;

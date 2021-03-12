@@ -105,6 +105,9 @@ height: 60px;
 
 }
 
+.dashStudentName{
+    padding: 20px;
+}
 .chat-widget-main {
     max-height:330px;
     overflow:auto;

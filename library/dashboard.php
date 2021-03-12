@@ -39,6 +39,24 @@ else{?>
                             </div>
 
         </div>
+
+<?php 
+$sid=$_SESSION['stdid'];
+$sql="SELECT StudentId,FullName,EmailId,MobileNumber,RegDate,UpdationDate,Status from  tblstudents  where StudentId=:sid ";
+$query = $dbh -> prepare($sql);
+$query-> bindParam(':sid', $sid, PDO::PARAM_STR);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$cnt=1;
+$studentName=$results[0]->FullName;
+?>
+
+<div class="row">
+<div class="col-md-3 col-sm-3 col-xs-6">
+<h4 class="dashStudentName"> <?php echo htmlentities($studentName);?></h4>
+</div>
+
+</div>
              
              <div class="row">
 
