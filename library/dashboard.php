@@ -53,7 +53,7 @@ $studentName=$results[0]->FullName;
 
 <div class="row">
 <div class="col-md-3 col-sm-3 col-xs-6">
-<h4 class="dashStudentName"> <?php echo htmlentities($studentName);?></h4>
+<h2 class="dashStudentName"> <?php echo htmlentities($studentName);?></h2>
 </div>
 
 </div>
@@ -77,7 +77,7 @@ $issuedbooks=$query1->rowCount();
 ?>
 
                             <h3><?php echo htmlentities($issuedbooks);?> </h3>
-                            Book Issued
+                            Books Issued
                         </div>
                     </div>
              
@@ -86,7 +86,7 @@ $issuedbooks=$query1->rowCount();
                             <i class="fa fa-retweet fa-5x"></i>
 <?php 
 $rsts=0;
-$sql2 ="SELECT id from tblissuedbookdetails where StudentID=:sid and RetrunStatus=:rsts";
+$sql2 ="SELECT id from tblissuedbookdetails where StudentID=:sid and ReturnStatus=:rsts";
 $query2 = $dbh -> prepare($sql2);
 $query2->bindParam(':sid',$sid,PDO::PARAM_STR);
 $query2->bindParam(':rsts',$rsts,PDO::PARAM_STR);

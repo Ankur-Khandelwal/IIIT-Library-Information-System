@@ -13,7 +13,7 @@ if(isset($_POST['return']))
 $rid=intval($_GET['rid']);
 $fine=$_POST['fine'];
 $rstatus=1;
-$sql="update tblissuedbookdetails set fine=:fine,RetrunStatus=:rstatus where id=:rid";
+$sql="update tblissuedbookdetails set fine=:fine,ReturnStatus=:rstatus where id=:rid";
 $query = $dbh->prepare($sql);
 $query->bindParam(':rid',$rid,PDO::PARAM_STR);
 $query->bindParam(':fine',$fine,PDO::PARAM_STR);
@@ -108,7 +108,7 @@ Issued Book Details
 <form role="form" method="post">
 <?php 
 $rid=intval($_GET['rid']);
-$sql = "SELECT tblstudents.FullName,tblbooks.BookName,tblbooks.ISBNNumber,tblissuedbookdetails.IssuesDate,tblissuedbookdetails.ReturnDate,tblissuedbookdetails.id as rid,tblissuedbookdetails.fine,tblissuedbookdetails.RetrunStatus from  tblissuedbookdetails join tblstudents on tblstudents.StudentId=tblissuedbookdetails.StudentId join tblbooks on tblbooks.id=tblissuedbookdetails.BookId where tblissuedbookdetails.id=:rid";
+$sql = "SELECT tblstudents.FullName,tblbooks.BookName,tblbooks.ISBNNumber,tblissuedbookdetails.IssuesDate,tblissuedbookdetails.ReturnDate,tblissuedbookdetails.id as rid,tblissuedbookdetails.fine,tblissuedbookdetails.ReturnStatus from  tblissuedbookdetails join tblstudents on tblstudents.StudentId=tblissuedbookdetails.StudentId join tblbooks on tblbooks.id=tblissuedbookdetails.BookId where tblissuedbookdetails.id=:rid";
 $query = $dbh -> prepare($sql);
 $query->bindParam(':rid',$rid,PDO::PARAM_STR);
 $query->execute();
@@ -169,7 +169,7 @@ echo htmlentities($result->fine);
 }
 ?>
 </div>
- <?php if($result->RetrunStatus==0){?>
+ <?php if($result->ReturnStatus==0){?>
 
 <button type="submit" name="return" id="submit" class="btn btn-info">Return Book </button>
 

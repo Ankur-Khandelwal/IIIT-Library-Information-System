@@ -130,7 +130,7 @@ CREATE TABLE `tblissuedbookdetails` (
   `StudentID` varchar(150) DEFAULT NULL,
   `IssuesDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `ReturnDate` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  `RetrunStatus` int(1) DEFAULT NULL,
+  `ReturnStatus` int(1) DEFAULT NULL,
   `fine` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -138,7 +138,7 @@ CREATE TABLE `tblissuedbookdetails` (
 -- Dumping data for table `tblissuedbookdetails`
 --
 
-INSERT INTO `tblissuedbookdetails` (`id`, `BookId`, `StudentID`, `IssuesDate`, `ReturnDate`, `RetrunStatus`, `fine`) VALUES
+INSERT INTO `tblissuedbookdetails` (`id`, `BookId`, `StudentID`, `IssuesDate`, `ReturnDate`, `ReturnStatus`, `fine`) VALUES
 (1, 1, 'SID002', '2017-07-15 06:09:47', '2017-07-15 11:15:20', 1, 0),
 (2, 1, 'SID002', '2017-07-15 06:12:27', '2017-07-15 11:15:23', 1, 5),
 (3, 3, 'SID002', '2017-07-15 06:13:40', NULL, 0, NULL),
