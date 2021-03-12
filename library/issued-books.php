@@ -94,7 +94,7 @@ foreach($results as $result)
                                             <td class="center"><?php if($result->ReturnDate=="")
                                             {?>
                                             <span style="color:red">
-                                             <?php   echo htmlentities("Not Return Yet"); ?>
+                                             <?php   echo htmlentities("Not Returned Yet"); ?>
                                                 </span>
                                             <?php } else {
                                             echo htmlentities($result->ReturnDate);
